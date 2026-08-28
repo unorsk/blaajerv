@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "lib": ["ES2023", "DOM", "DOM.Iterable", "ESNext.Array"],
+    "types": ["vite/client"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    // Relative imports carry .ts so Node's test runner resolves them natively.
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  // Components are checked by the Svelte compiler at build time; tsc only sees
+  // the .ts modules, which is where all the logic lives.
+  "include": ["src/**/*.ts", "vite.config.ts"],
+  "exclude": ["src/**/*.test.ts"]
+}
